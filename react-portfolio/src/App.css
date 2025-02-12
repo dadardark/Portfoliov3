@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: none; 
+  background: none; 
+}
+
+.App {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url('./assets/bg.gif') no-repeat center center fixed;
+  background-size: cover; 
+  animation: gradientMove 4s ease infinite; 
+}
+
+

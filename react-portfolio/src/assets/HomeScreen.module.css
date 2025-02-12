@@ -1,0 +1,87 @@
+.appContainer {
+    margin-top: 50px; 
+  }
+  
+  .iphoneFrame {
+    width: 40vw;
+    height: 80vh;
+    border-radius: 40px;
+    border: 16px solid black;
+    background-color: #f2f2f7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iphoneScreen {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 40px 20px 20px 20px; 
+    text-align: center;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to bottom, #64c8e9, #d2b48c);
+  }
+  
+  .iphoneScreen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 30px;
+    background-color: black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }  
+  
+  .statusBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 100; 
+    padding: 10px;
+  }
+  
+  .statusIcon {
+    width: 20px;
+    margin-left: 10px;
+  }
+  
+  .homeScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .appGrid {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .statusTray {
+    display: flex;
+    justify-content: space-evenly;
+    width: 95%;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 20px; 
+    background-color: #4e4e5a81;
+    padding: 10px 0;
+  }
+  
