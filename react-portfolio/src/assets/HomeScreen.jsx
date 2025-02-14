@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './HomeScreen.module.css';
 import AppIcon from './AppIcon.jsx';
 import logo from './logo.png'; 
@@ -8,6 +8,24 @@ import HC from './healthy-connections-edit.png';
 
 
 function HomeScreen({ lock }) {
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    const updateDateTime = () => {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+      setCurrentTime(`${hours}:${minutes}`);
+    };
+
+    updateDateTime();
+    const intervalId = setInterval(updateDateTime, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className={styles.appContainer}>
       <div className={styles.iphoneFrame}>
@@ -17,7 +35,7 @@ function HomeScreen({ lock }) {
             <img src="https://img.icons8.com/ios-filled/50/000000/wifi.png" alt="Wi-Fi" className={styles.statusIcon} />
             <img src="https://img.icons8.com/?size=100&id=zddfYtvTqQmM&format=png&color=000000" alt="Battery" className={styles.statusIcon} />
           </div>
-
+          <p className={styles.timeBar}>{currentTime}</p>
           <div className={styles.homeScreen}>
             <div className={styles.appGrid}>
               <AppIcon name="Tic-Tac-Toe" iconSrc="https://img.icons8.com/?size=100&id=fS8E5bcWpMqK&format=png&color=000000" />
