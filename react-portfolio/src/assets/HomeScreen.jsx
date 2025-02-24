@@ -54,7 +54,7 @@ function HomeScreen({ }) {
   }
 
   const handleClickResume =() => {
-    window.open('https://drive.google.com/file/d/1FENtb28Bqp6gYAaG7J27QwG7UMTFF-Bj/view?usp=sharing','_blank');
+    window.open('https://drive.google.com/file/d/17VIJrYztN1c7tdagqPs8U5ZTrOqrVQiJ/view?usp=drive_link','_blank');
   }
 
   const handleClickMKX = () => {
