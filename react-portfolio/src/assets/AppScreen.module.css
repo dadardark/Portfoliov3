@@ -39,30 +39,6 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }  
-
-  
-.lockIcon {
-    margin-top: 60px;
-    position: absolute;
-    top: 15px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-  }
-  
-.date {
-    margin-top: 60px; 
-    font-size: 20px;
-    font-weight: 600;
-  }
-  
-p {
-    font-size: 60px;
-    font-weight:bolder;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-  }
   
 .iphoneFrame::before {
     content: '';
@@ -92,34 +68,12 @@ p {
     margin-left: 10px;
   }
 
-.bottomButtonContainer {
-    position: absolute;
-    bottom: 10%;  
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    text-align: center;  /* Center the text under the button */
-  }
-  
-.bottomButton {
-    background-color: transparent;
+  .webView {
+    width: 100%;
+    height: 100%;
     border: none;
-    cursor: pointer;
-    transition: transform 0.5s ease-in-out; 
-  }
-  
-.bottomButton:hover {
-    transform: rotate(360deg) scale(1.5); 
-  }
-  
-.bottomButtonIcon {
-    width: 40px;  
   }
 
-.unlockText {
-    margin-top: 8px;  
-    font-size: 12px;
-    color: #5a5959;  
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
+  
+
   
